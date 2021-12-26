@@ -10,4 +10,5 @@ while os.environ["DESKTOP_SESSION"] == 'spectrwm':
     memory = psutil.virtual_memory()[2]
     # Current timestamp:
     current_time = time.strftime("%A, %d/%m/%Y %R")
+    # Parse and print result:
     print("RAM: %d%s | %s" %(memory, '%', current_time))
