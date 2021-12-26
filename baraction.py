@@ -6,6 +6,8 @@ import psutil
 import time
 
 while os.environ["DESKTOP_SESSION"] == 'spectrwm':
+    # Memory usage:
     memory = psutil.virtual_memory()[2]
+    # Current timestamp:
     current_time = time.strftime("%A, %d/%m/%Y %R")
     print("RAM: %d%s | %s" %(memory, '%', current_time))
