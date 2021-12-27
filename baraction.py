@@ -4,6 +4,10 @@
 import os
 import psutil
 import time
+# Useful modules for listing windows
+# Also check out "man xprop"
+# import Xlib
+# import Xlib.display
 
 while os.environ["DESKTOP_SESSION"] == 'spectrwm':
     # Memory usage:
