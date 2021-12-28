@@ -12,7 +12,9 @@ import time
 while os.environ["DESKTOP_SESSION"] == 'spectrwm':
     # Memory usage:
     memory = psutil.virtual_memory()[2]
+    # Battery level:
+    battery = psutil.sensors_battery()[0]
     # Current timestamp:
     current_time = time.strftime("%A, %d/%m/%Y %R")
     # Parse and print result:
-    print("RAM: %d%s | %s" %(memory, '%', current_time))
+    print("RAM: %d%s | battery: %d%s | %s" %(memory, '%', battery, '%', current_time))
