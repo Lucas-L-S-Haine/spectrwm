@@ -5,11 +5,11 @@ total_memory <- as.numeric(system2("cat",
     stdout = TRUE)[1])
 
 repeat {
-    # current_desktop <- system2('xdotool', args = 'get_desktop', stdout = TRUE)
+    # current_desktop <- system2("xdotool", args = "get_desktop", stdout = TRUE)
     # Volume:
-    volume <- paste0(c('Vol',
-        system2('pulsemixer', args = '--get-volume', stdout = TRUE)),
-        collapse = ': '
+    volume <- paste0(c("Vol",
+        system2("pulsemixer", args = "--get-volume", stdout = TRUE)),
+        collapse = ": "
     )
     # Memory usage:
     memory_percent <- (total_memory - as.numeric(system2("cat",
